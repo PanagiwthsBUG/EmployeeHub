@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "dev": "nodemon server.js",
-    "start": "node server.js"
-  },
+"scripts": {
+  "dev": "nodemon server.js",
+  "start": "node server.js",
+  "migrate:create": "node-pg-migrate create",
+  "migrate:up": "node-pg-migrate up --config-file database.config.cjs",
+  "migrate:down": "node-pg-migrate down --config-file database.config.cjs"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
