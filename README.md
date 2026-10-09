@@ -541,7 +541,35 @@ Changes should be committed in logical stages with descriptive commit messages.
 * [ ] Deployment
 * [ ] Documentation
 
+## Design Decision DD-001: Separation of Employees and Users
+
+**Status:** Accepted — subject to future review
+
+**Decision:** The EmployeeHub platform will maintain separate database entities for `employees` and `users`.
+
+**Rationale:**
+
+* The `employees` entity will represent personnel and employment information, including employee identity, company affiliation, department, professional contact details and employment dates.
+* The `users` entity will represent application accounts and authentication information, including login identifiers, securely stored password hashes and access roles.
+* An employee may exist in the system without having an application account.
+* Separating personnel records from authentication accounts provides greater flexibility when managing onboarding, account activation, access permissions and employee departures.
+
+**Architectural implications:**
+
+* Both entities will be associated with the relevant company to support the platform's multi-tenant architecture.
+* The relationship between an employee and a user account will be explicitly defined when implementing authentication.
+* Authorization and tenant isolation must be enforced by the backend, independently of this data model separation.
+
+**Future review:** This decision is open to reconsideration as the platform evolves. It may be reviewed if implementation complexity, business requirements or changes to the identity and access management model justify an alternative design.
+
+**Review trigger:** Reassess the decision when implementing authentication, account provisioning and employee lifecycle management.
+
+**Decision date:** October 2026.
+
+
 ---
+
+
 
 # License
 
