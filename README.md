@@ -521,7 +521,18 @@ Changes should be committed in logical stages with descriptive commit messages.
 * [ ] Employee profiles
 * [ ] Department assignment
 
-### Phase 5 — Identity & Email
+### Phase 5 — Frontend & User Experience
+
+* [ ] Design system and UI components
+* [ ] Application layout and navigation
+* [ ] Dashboard interface
+* [ ] Responsive design
+* [ ] Loading, empty and error states
+* [ ] Frontend form validation
+* [ ] API integration for employee management
+* [ ] Role-based UI visibility
+
+### Phase 6 — Identity & Email
 
 * [ ] Email provider abstraction
 * [ ] Mock email provider
@@ -530,7 +541,7 @@ Changes should be committed in logical stages with descriptive commit messages.
 * [ ] Domain configuration
 * [ ] Employee email provisioning
 
-### Phase 6 — Production Readiness
+### Phase 7 — Production Readiness
 
 * [ ] Automated tests
 * [ ] API validation
