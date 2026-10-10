@@ -492,17 +492,17 @@ Changes should be committed in logical stages with descriptive commit messages.
 * [x] Configure React/Vite
 * [x] Configure PostgreSQL
 * [x] Establish backend-database connection
-* [x] Establish frontend-backend communication
+* [ ] Establish frontend-backend communication
 
 ### Phase 2 — Database
 
-* [ ] Configure database migrations
-* [ ] Create `companies`
-* [ ] Create `departments`
-* [ ] Create `employees`
-* [ ] Create `users`
-* [ ] Create `audit_logs`
-* [ ] Implement database constraints and indexes
+* [x] Configure database migrations
+* [x] Create `companies`
+* [x] Create `departments`
+* [x] Create `employees`
+* [x] Create `users`
+* [x] Create `audit_logs`
+* [x] Implement database constraints and indexes
 
 ### Phase 3 — Authentication
 
@@ -540,6 +540,7 @@ Changes should be committed in logical stages with descriptive commit messages.
 * [ ] Logging and monitoring
 * [ ] Deployment
 * [ ] Documentation
+
 
 ## Design Decision DD-001: Separation of Employees and Users
 
