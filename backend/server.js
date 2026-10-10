@@ -1,5 +1,8 @@
 const express = require("express");
 const cors = require("cors");
+const companyRoutes = require("./routes/companyRoutes");
+const departmentRoutes = require("./routes/departmentRoutes");
+
 require("dotenv").config();
 
 const pool = require("./config/database");
@@ -10,6 +13,12 @@ const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
+app.use("/api/companies", companyRoutes);
+
+app.use(
+    "/api/companies/:companyId/departments",
+    departmentRoutes
+);
 
 app.get("/", (req, res) => {
     res.json({
