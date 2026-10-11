@@ -521,6 +521,27 @@ Changes should be committed in logical stages with descriptive commit messages.
 * [ ] Employee profiles
 * [ ] Department assignment
 
+### Employee Management — Progress
+
+**Completed**
+
+* [x] Implemented `GET /api/companies/:companyId/employees` to retrieve employees belonging to a company.
+* [x] Implemented `POST /api/companies/:companyId/employees` to create employees.
+* [x] Implemented `PUT /api/companies/:companyId/employees/:employeeId` to update employee details.
+* [x] Added input validation for employee names, email addresses, department IDs, hire dates, and employment status.
+* [x] Enforced company ownership checks when retrieving, creating, and updating employees.
+* [x] Added department information to employee list responses using a `LEFT JOIN`.
+* [x] Standardized hire date responses to `YYYY-MM-DD`.
+* [x] Tested employee creation, retrieval, validation, and update requests through Postman.
+
+**Next steps**
+
+* [ ] Implement employee status changes through a dedicated `PATCH` endpoint.
+* [ ] Review employee deletion and termination handling to preserve HR history.
+* [ ] Add authentication and role-based authorization.
+* [ ] Continue backend implementation before proceeding with the planned frontend development.
+
+
 ### Phase 5 — Frontend & User Experience
 
 * [ ] Design system and UI components
