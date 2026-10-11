@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const companyRoutes = require("./routes/companyRoutes");
 const departmentRoutes = require("./routes/departmentRoutes");
+const employeeRoutes = require("./routes/employeeRoutes");
 
 require("dotenv").config();
 
@@ -18,6 +19,11 @@ app.use("/api/companies", companyRoutes);
 app.use(
     "/api/companies/:companyId/departments",
     departmentRoutes
+);
+
+app.use(
+    "/api/companies/:companyId/employees",
+    employeeRoutes
 );
 
 app.get("/", (req, res) => {
